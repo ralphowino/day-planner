@@ -23,7 +23,7 @@ class CreateTasksTable extends Migration
             $table->decimal('duration', 10, 2)->nullable();
             $table->dateTime('due_at');
             $table->dateTime('start_at');
-            $table->json('outcomes')->default('[]');
+            $table->json('outcomes')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
